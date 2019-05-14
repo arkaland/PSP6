@@ -21,18 +21,18 @@ La primera aplicación cumple todos los requisitos que se piden.
 
 Antes de nada vamos a agregar un poco de código al principio del programa para poder hacer el punto 2, consistente en politicas de acceso. Para ello vamos a agregar este código a fin de capturar las propiedades java.home y user.home
 
-**Captura 0 de modificando aplicación**
+![Captura 0 de modificando aplicación](https://github.com/arkaland/PSP6/blob/master/imagenes/0_Agregando%20codigo%20para%20politicas.JPG)
 
 Luego lo que hacemos es mover la aplicación que hemos hecho para el punto 6.1 FUERA del paquete de Netbeans PSP6, de esta forma podemos compilarlo y no será necesario incluir rutas o manifest para que funcione independientemente de la ruta de donde vayamos a ejecutarlo.
 
 *También vemos que se ha eliminado la sentencia PACKAGE*
 
-**Captura 1 de código sin paquete**
+![Captura 1 de código sin paquete](https://github.com/arkaland/PSP6/blob/master/imagenes/1_Codigo%20sin%20paquete.JPG)
 
 
 Ahora moveremos el archivo PSP6.java a un directorio para facilitar las pruebas.
 
-**Captura 2 de moviendo fichero java**
+![Captura 2 de moviendo fichero java](https://github.com/arkaland/PSP6/blob/master/imagenes/2_Moviendo%20fichero%20java.JPG)
 
 Tras esto compilamos y ejecutamos el código con los siguientes comandos vía cmd:
 > javac PSP6.java
@@ -42,16 +42,16 @@ Tras esto compilamos y ejecutamos el código con los siguientes comandos vía cm
 También lanzaremos la aplicación con el siguiente comando:
 > java -Djava=security.manager PSP6
 
-**Captura 3 de compilar y ejecutar**
+![Captura 3 de compilar y ejecutar](https://github.com/arkaland/PSP6/blob/master/imagenes/3_Compilar%20y%20ejecutar.JPG)
 
 Vemos que se leen todas las propiedades del archivo. Ejecutamos policytool y abrimos java.policy en la ruta actual de java.
 
 
-**Captura 4 policytool y java.policy**
+![Captura 4 policytool y java.policy](https://github.com/arkaland/PSP6/blob/master/imagenes/4_policytool%20y%20java.policy.JPG)
 
 Vemos que hay una entrada que es Codebase <All> que permite que todos los programas lean todas las propiedades. Si retiramos esa politica nuestro programa no podría leer propiedades sensibles.
 
-**Captura 5 codebase all**
+![Captura 5 codebase all](https://github.com/arkaland/PSP6/blob/master/imagenes/5_Captura%20codebase%20all.JPG)
 
 
 
@@ -66,7 +66,7 @@ Y generamos las claves con el siguiente comando:
 
 > keytool -genkey -alias firmar -keypass hola00 -keystore DAM -storepass distancia
 
-** Captura 6 jar y keys generadas **
+![Captura 6 jar y keys generadas](https://github.com/arkaland/PSP6/blob/master/imagenes/6_jar%20y%20generar%20keys.JPG)
 
 
 Ya podemos ***Firmar el fichero*** con el siguiente comando:
@@ -75,12 +75,11 @@ Ya podemos ***Firmar el fichero*** con el siguiente comando:
 
 *Nos pedirá la clave de storepass y la clave de keypass , por ese orden*
 
-**Captura 7 jar signed**
+![Captura 7 jar signed](https://github.com/arkaland/PSP6/blob/master/imagenes/7_JAR%20signed.JPG)
 
 Por último debemos exportar la llave publica para generar un archivo .cert el cual debemos enviar junto con nuestro jar a los clientes o destinatarios de la aplicación.
 
-**Captura 8 exportando llave**
-
+![Captura 8 exportando llave](https://github.com/arkaland/PSP6/blob/master/imagenes/8_Exportar%20llave%20publica.JPG)
 
 
 ## Solo lectura en C:\Datos ##
@@ -98,7 +97,7 @@ Una vez hecho esto solo tendríamos que agregar un unico permiso, que sería est
 
 Con esto permitiríamos UNICAMENTE que se puedan leer ficheros en la carpeta indicada.
 
-**Captura 9 Solo leer en c datos**
+![Captura 9 Solo leer en c datos](https://github.com/arkaland/PSP6/blob/master/imagenes/9_Exportar%20llave%20publica.JPG)
 
 Con esto concluye este readme. 
 
