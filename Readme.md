@@ -100,6 +100,3 @@ Con esto permitiríamos UNICAMENTE que se puedan leer ficheros en la carpeta ind
 ![Captura 9 Solo leer en c datos](https://github.com/arkaland/PSP6/blob/master/imagenes/9_Exportar%20llave%20publica.JPG)
 
 Con esto concluye este readme. 
-
-Este es el readme de la parte **6.2**
-
